@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Boot Link -->
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="myform">
+            <!-- name  -->
+            <div class="name">
+                <label for="namelable">Name</label>
+                <input type="text" id="nameId" placeholder="Enter name">
+            </div>
+            <span class="name-span" id="nameSpan">"Please enter your name"</span>
+
+            <!-- email  -->
+            <div class="email">
+                <label for="email-lable">Email</label>
+                <input type="email" id="emailId" placeholder="Enter Email">
+            </div>
+            <span class="name-span" id="emailSpan">"Please enter your email"</span>
+
+            <!-- password -->
+            <div class="password">
+                <label for="password-lable">Password</label>
+                <input type="password" id="passId" placeholder="Enter Password">
+            </div>
+            <span class="name-span" id="passSpan">"Your Password is between 4 and 12 character"</span>
+
+            <!-- address -->
+            <div class="address">
+                <label for="address-lable">Address</label>
+                <textarea name="address-text" id="addId" rows="4" placeholder="Enter your address"></textarea>
+            </div>
+            <span class="name-span" id="addSpan">"Please enter your address"</span>
+
+
+            <!-- choose your sports -->
+            <div class="checkbox">
+                <label for="checkboxlable" class="choose-sports">choose your sports</label>
+
+                <div class="cricket">
+                    <input type="checkbox" name="sport"> Cricket
+                </div>
+
+                <div class="cricket" name="sport">
+                    <input type="checkbox"> FootBall
+                </div>
+
+                <div class="cricket" name="sport">
+                    <input type="checkbox"> BaseBall
+                </div>
+            </div>
+            <span class="name-span" id="cricketSpan">"Please choose your sports"</span>
+
+
+            <!-- choose your gender -->
+            <div class="radio">
+                <label for="radio-lable" class="choose-gender">Choose your gender</label>
+                <div class="gender">
+                    <input type="radio" name="radio"> Male
+                </div>
+                <div class="gender">
+                    <input type="radio" name="radio"> Female
+                </div>
+                <div class="gender">
+                    <input type="radio" name="radio"> Prefer not to say
+                </div>
+            </div>
+            <span class="name-span" id="cricketSpan">"Please choose your gender"</span>
+           
+
+
+
+
+            <!-- select your country -->
+            <div class="select">
+
+                <label for="select-country">Select your country</label>
+                <select name="selectyourcountry" id="" class="select-box">
+                    <option value="india">India</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="uae">UAE</option>
+                </select>
+            </div>
+            <!-- Button Group -->
+            <div class="button_g">
+                <button type="button" class="reset" onclick="resetOn()">Reset</button>
+                <button type="button" class="save" onclick="saveClick()">Save</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- JS Link -->
+    <script src="assets/script.js"></script>
+
+    <!-- Boot Link -->
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.js">
+    <link rel="stylesheet" href="assets/Bootstrap/popper.min.js">
+</body>
+
+</html>
