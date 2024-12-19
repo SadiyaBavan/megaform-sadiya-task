@@ -14,6 +14,9 @@ const passSpan = document.getElementById('passSpan');
 const add_id = document.getElementById('addId');
 const add_span = document.getElementById('addSpan');
 
+// Table Body
+const myid = document.getElementById("myid");
+
 
 function saveClick() {
      
@@ -49,26 +52,109 @@ function saveClick() {
 
 
     //  Address
-    if(!pass_id.value){
-        pass_span.style.display = 'block';
-        pass_id.style.border = "1px solid #EB5757";
+    if(!add_id.value){
+        add_span.style.display = 'block';
+        add_id.style.border = "1px solid #EB5757";
     }
     else{
-        pass_span.style.display = 'none';
-        pass_id.style.border = "1px solid black";
+        add_span.style.display = 'none';
+        add_id.style.border = "1px solid black";
     }
 
     // CheckBox
-    const checkedElements = docement.querySelectorAll("input[name='sport']:checked");
-    const cricketSpan = document.getElementById("cricketSpan");
-    if(checkedElements.length > 0) {
-        cricketSpan.style.display = 'none';
+    const checkedElements = document.querySelectorAll("input[name='sport']:checked");
+    const checkSpan = document.getElementById("checkSpan");
+    if (checkedElements.length > 0) {
+        checkSpan.style.display = 'none';
+    }
+    else {
+        checkSpan.style.display = 'block';
+    }
+
+    // Radio
+    const checkedElementsRadio = document.querySelectorAll("input[name='radio']:checked");
+    const radioSpan = document.getElementById("radioSpan");
+    if (checkedElementsRadio.length  > 0) {
+        radioSpan.style.display = 'none';
     }
     else{
-        cricketSpan.style.display = 'block';
+        radioSpan.style.display = 'block';
     }
+
+    // Country
+    const myCountry = document.getElementById("myCountry");
+    const mySelect = document.getElementById("mySelect");
+
+    if(!myCountry.value) {
+        mySelect.style.display = 'block';
+
+    }
+    else{
+        mySelect.style.display = 'none';
+
+    }
+
+    if (nameid.value &&
+        em_id.value &&
+        passid.value.length > 4 &&
+        passid.value.length < 12 &&
+        add_id.value &&
+        checkedElements.length != 0 &&
+        genderElements.length != 0 &&
+        selectid.value
+    ) {
+        const formData = {
+            name: nameid.value,
+            email:em_id.value,
+            password: passid.value,
+            address: add_id.value,
+            country: myCountry.value,
+        };
+        addData(formData);
+        resetSave();
     
 }
+}
+
+function addData(formData){
+    const tr = document.createElement("tr");
+
+    const nameTd = document.createElement("td");
+    const emailTd = document.createElement("td");
+    const addressTd = document.createElement("td");
+    const passwordTd = document.createElement("td");
+    const genderTd = document.createElement("td");
+    const countryTd = document.createElement("td");
+    const checkTd = document.createElement("td");
+
+    nameTd.innerHTML = formData.name;
+    emailTd.innerHTML = formData.email;
+    passwordTd.innerHTML = formData.password;
+    countryTd.innerHTML = formData.country;
+    addressTd.innerHTML = formData.address;
+
+    tr.append(
+        nameTd,
+        emailTd,
+        addressTd,
+        passwordTd,
+        genderTd,
+        countryTd,
+        checkTd,
+    );
+
+    myid.appendChild(tr); 
+
+}
+//  reset
+function resetSave() {
+    nameid.value = "";
+    em_id.value = "";
+    add_id.value = "";
+    passid.value = "";
+    myCountry.value = "";
+}
+
 
 
 // Reset

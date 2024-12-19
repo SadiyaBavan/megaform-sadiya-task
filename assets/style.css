@@ -184,3 +184,38 @@ body {
     font-size: 15px;
     font-weight: 400;
 }
+
+/* Table part */
+
+table{
+    width: 100%;
+}
+
+table th{
+    padding-bottom: 20px;
+}
+
+table td{
+    padding: 15px 0;
+}
+
+.nodata {
+    text-align: center;
+    font-family: 'NotoSans-Regula';
+}
+
+.nodata p{
+   font-weight: 700;
+   font-size: 50px;
+}
+
+
+@media only screen and (max-width=786px) {}
+.msgprint p {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 30px;
+    color: #EB5757;
+    font-weight: 800;
+    display: none;
+}

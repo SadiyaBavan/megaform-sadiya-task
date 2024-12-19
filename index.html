@@ -46,21 +46,17 @@
             <!-- choose your sports -->
             <div class="checkbox">
                 <label for="checkboxlable" class="choose-sports">choose your sports</label>
-
                 <div class="cricket">
-                    <input type="checkbox" name="sport"> Cricket
+                    <input type="checkbox" name="sport"> cricket
                 </div>
-
-                <div class="cricket" name="sport">
-                    <input type="checkbox"> FootBall
+                <div class="cricket">
+                    <input type="checkbox" name="sport"> football
                 </div>
-
-                <div class="cricket" name="sport">
-                    <input type="checkbox"> BaseBall
+                <div class="cricket">
+                    <input type="checkbox" name="sport"> baseball
                 </div>
             </div>
-            <span class="name-span" id="cricketSpan">"Please choose your sports"</span>
-
+            <span class="name-span" id="checkSpan">"Please choose sports"</span>
 
             <!-- choose your gender -->
             <div class="radio">
@@ -75,28 +71,62 @@
                     <input type="radio" name="radio"> Prefer not to say
                 </div>
             </div>
-            <span class="name-span" id="cricketSpan">"Please choose your gender"</span>
-           
-
-
+            <span class="name-span" id="radioSpan">"Please choose your gender"</span>
 
 
             <!-- select your country -->
             <div class="select">
 
                 <label for="select-country">Select your country</label>
-                <select name="selectyourcountry" id="" class="select-box">
+                <select name="selectyourcountry" id="myCountry" class="select-box">
+                    <option value="">Please select your country</option>
                     <option value="india">India</option>
                     <option value="pakistan">Pakistan</option>
                     <option value="uae">UAE</option>
                 </select>
             </div>
+            <span class="name-span" id="mySelect">please choose country</span>
+
+
             <!-- Button Group -->
             <div class="button_g">
                 <button type="button" class="reset" onclick="resetOn()">Reset</button>
                 <button type="button" class="save" onclick="saveClick()">Save</button>
             </div>
         </form>
+    </div>
+
+    <!-- <div class="msgprint">
+        <p id="complet">Please fill the form</p>
+    </div> -->
+
+    <div class="container">
+        <div class="nodata">
+            <p>No user Found</p>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Sports</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody id="myid">
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
     </div>
 
 
